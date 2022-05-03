@@ -6,9 +6,9 @@ Python 3.8
 ## introduction:
 In this task we were asked to identify a validity that produces full communication in meaningless content on the SSH protocol. The goal was to build a Peyton script that detects this attack, and prints to the screen: "Fuzzing detected". I used the scape library for Peyton to listen to the above media and identify the attack.
 Details of the plans:
-# Fuzzing.py:
+Fuzzing.py:
 In this program I wrote my solution to the task, the program will use the sniff function to "branch" into packages and provide information about them. Once the packages are captured they will be sent to a function that will analyze and check if the contents of the package are meaningful and use the SSH protocol correctly, if the program does not know how to decrypt it, print to the user: "Fuzzing detected", and perform an exit by exit.
-# server.py:
+server.py:
 To test the program I wrote Fuzzing.py I wrote another program in which I created scapy packages with ssh protocol and sent packages that would be caught by the "branch" of the program Fuzzing.py for packages of the above type. .
 
 
