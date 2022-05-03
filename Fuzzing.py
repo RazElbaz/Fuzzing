@@ -4,6 +4,18 @@ from scapy.layers.inet import TCP, IP
 
 i = 1  # index for the packet's number
 
+"""
+Running:
+1.Make sure you have python3-enchant:
+    If you have not run the following commands in the terminal:
+    sudo apt-get update
+    sudo apt-get install python3-enchant
+2. Activate the Fuzzing.py program by typing the following line in the terminal:
+    sudo python3 ./Fuzzing.py
+3. To test the program and see that it does detect meaningless communication, type the following line of code from another terminal to run server.py:
+    sudo python3 ./server.py
+"""
+
 
 def check_fuzz(pkt):
     """
@@ -36,6 +48,7 @@ def check_fuzz(pkt):
         print("The program found an illogical sequence of letters")
         fuzzing(pkt)
     print("")
+
 
 def check_Fuzzing_detected(data):
     """
@@ -75,15 +88,7 @@ def fuzzing(pkt):
 
 
 if __name__ == '__main__':
+    print("Waiting for packets...\n\n")
     # based on this web for example of packet sniffing using Scapy
     # https://thepacketgeek.com/scapy/sniffing-custom-actions/part-1/
     pkt = sniff(filter="tcp dst port 22", prn=check_fuzz)
-
-"""
-readme:
-Install python3-enchant
-Installing python3-enchant package on Ubuntu is as easy as running the following command on terminal:
-
-sudo apt-get update
-sudo apt-get install python3-enchant
-"""
