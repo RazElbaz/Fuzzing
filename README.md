@@ -22,12 +22,14 @@ Enchant is a module in python that is used to check the spelling of a word, givi
 
 Purpose of use: To check if the content of the word contains an illogical sequence of letters, if what is sent is probably an attack, then the program will be closed.
 
-## Run (in Linux):
-Make sure you have python3-enchant
+## Running (in Linux):
+1. Make sure you have python3-enchant
 If you have not run the following commands in the terminal:
 sudo apt-get update
 sudo apt-get install python3-enchant
-Activate the Fuzzing.py program by typing the following line in the terminal:
+
+2. Activate the Fuzzing.py program by typing the following line in the terminal:
 sudo python3 ./Fuzzing.py
-To test the program and see that it does detect meaningless communication, type the following line of code from another terminal to run server.py:
+
+3.To test the program and see that it does detect meaningless communication, type the following line of code from another terminal to run server.py:
 sudo python3 ./server.py
