@@ -31,5 +31,6 @@ sudo apt-get install python3-enchant
 2. Activate the Fuzzing.py program by typing the following line in the terminal:
 sudo python3 ./Fuzzing.py
 
+
 3.To test the program and see that it does detect meaningless communication, type the following line of code from another terminal to run server.py:
 sudo python3 ./server.py
